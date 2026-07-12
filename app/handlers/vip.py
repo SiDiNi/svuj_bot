@@ -19,19 +19,19 @@ async def start_command(message: Message):
     username = message.from_user.username
     full_name = message.from_user.full_name
 
-    async with get_db() as session:
-        stmt = select(User).where(User.tg_id == user_id)
-        result = await session.execute(stmt)
-        user = result.scalar_one_or_none()
-
-        if not user:
-            new_user = User(
-                tg_id=user_id,
-                full_name=full_name,
-                username=username,
-                created_at=datetime.now(),
-            )
-            session.add(new_user)
+    # async with get_db() as session:
+    #     stmt = select(User).where(User.tg_id == user_id)
+    #     result = await session.execute(stmt)
+    #     user = result.scalar_one_or_none()
+    #
+    #     if not user:
+    #         new_user = User(
+    #             tg_id=user_id,
+    #             full_name=full_name,
+    #             username=username,
+    #             created_at=datetime.now(),
+    #         )
+    #         session.add(new_user)
 
     await message.answer("МЕНЮ", reply_markup=IK.inline_menu())
 
