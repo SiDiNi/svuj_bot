@@ -6,7 +6,6 @@ from aiogram.types import CallbackQuery, Message
 from sqlalchemy import select
 
 from app.keyboards.inline import InlineKeyboard as IK
-from app.models.models import User
 
 
 vip_router = Router()
