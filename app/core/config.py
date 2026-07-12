@@ -35,7 +35,7 @@ def load_config(data: str | None = None) -> Config:
     return Config(
         bot=TgBot(
             bot_token=env("BOT_TOKEN"), admin_ids=list(map(int, env.list("ADMIN_IDS")))
-        ),
+        )
         # db=Database(
         #     host=env("DB_HOST"),
         #     port=env("DB_PORT"),

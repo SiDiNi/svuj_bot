@@ -5,7 +5,6 @@ from aiogram.filters import Command
 from aiogram.types import CallbackQuery, Message
 from sqlalchemy import select
 
-from app.database.database import get_db
 from app.keyboards.inline import InlineKeyboard as IK
 from app.models.models import User
 
