@@ -1,0 +1,19 @@
+.env
+__pycache__/
+downloads/
+
+# Virtual environments
+venv/
+venv
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+
+# Database
+*.db
+*.sqlite3
+pgdata/
+postgres_data/
